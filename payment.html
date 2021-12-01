@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="body-container">
+        <ul class="topnav">
+            <li>
+                <p>Your Order</p>
+            </li>
+            <li>
+                <p>Shipping Details</p>
+            </li>
+            <li>
+                <p class="active">Payment Details</p>
+            </li>
+            <li>
+                <p>Confirmation</p>
+            </li>
+        </ul>
+        <div class="card-container">
+            <div class="float-layout">
+                <div class="card-image" style="position: relative;">
+                    <img src="credit-card.jpg">
+                    <div id="card-name" class="text-img-name"></div>
+                    <div id="card-num" class="text-img-num"></div>
+                    <div id="card-date" class="text-img-date"></div>
+
+                    <div class="card">
+                        <div class="card-title">Payment Detail</div>
+                        <div class="card-desc">
+                            <div class="autocomplete" style="width:300px;">
+                                <input id="name-input" type="text" name="myCountry" placeholder="Name on card">
+                                <input id="num-input" type="text" name="myCountry" placeholder="Card number">
+                                <input id="date-input" type="text" name="myCountry" placeholder="Valid through">
+                                <input type="text" name="myCountry" placeholder="CVV">
+                            </div>
+                            <button class="button" style="width: 43.5%;"><a href="shipping.html">Back</a></button>
+                            <button class="button" style="width: 43.5%;"><a href="confirm.html">Next</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $("#name-input").on("input", function () {
+                $("#card-name").html($(this).val());
+            });
+            $("#num-input").on("input", function () {
+                $("#card-num").html($(this).val());
+            });
+            $("#date-input").on("input", function () {
+                $("#card-date").html($(this).val());
+            });
+        </script>
+    </div>
+</body>
+
+</html>
